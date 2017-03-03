@@ -23,4 +23,12 @@ public class UserTest {
         Assert.assertNotNull(user.getAge());
         Assert.assertNotNull(user.getCity());
     }
+
+    @Test
+    public void userHasEmailAndNameAndSurname() {
+        User user = new User.UserBuilder().email("email@email.com").name("adam").surname("kowalski").build();
+        Assert.assertNotNull(user.getEmail());
+        Assert.assertNotNull(user.getName());
+        Assert.assertNotNull(user.getSurname());
+    }
 }
